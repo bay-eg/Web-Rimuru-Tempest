@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tabel Data Idola Saya" />
+    <title>Tabel Idola Saya</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>Data Fans Yang Telah Mengisi</h1>
+    </header>
+
+    <div class="container">
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Email</th>
+              <th>Tanggal Bergabung</th>
+            </tr>
+          </thead>
+          <tbody id="fanTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer class="container">
+      <p>© 2024 Website Fans Rimuru Tempest</p>
+    </footer>
+
+    <script>
+      fetch("data.json")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          const tableBody = document.getElementById("fanTableBody");
+          data.forEach((fan) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                        <td>${fan.no}</td>
+                        <td>${fan.name}</td>
+                        <td>${fan.email}</td>
+                        <td>${fan.joinDate}</td>
+                    `;
+            tableBody.appendChild(row);
+          });
+        })
+        .catch((error) => console.error("Error loading data:", error));
+    </script>
+  </body>
+</html>
