@@ -1,4 +1,4 @@
-# Website Idola Saya
+# Website Fans Rimuru Tempest
 
 Ini adalah proyek sederhana berbentuk website yang dibangun menggunakan **HTML**, **CSS**, serta **Bootstrap** sebagai framework CSS. Proyek ini dibuat dalam rangka menyelesaikan tugas akademik, dan juga mendemonstrasikan penerapan **microformat** dalam struktur HTML-nya.
 
