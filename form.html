@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Formulir Idola Saya" />
+    <title>Formulir Idola Saya</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      header {
+        padding: 30px;
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>Formulir Fans Rimuru Tempest</h1>
+    </header>
+
+    <div class="container">
+      <form action="form.html" method="GET">
+        <div class="form-group">
+          <label for="name">Nama:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="dob">Tanggal Lahir:</label>
+          <input
+            type="date"
+            class="form-control"
+            id="dob"
+            name="dob"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label>Jenis Kelamin:</label><br />
+          <input type="radio" id="male" name="gender" value="male" required />
+          <label for="male">Laki-laki</label><br />
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+            required
+          />
+          <label for="female">Perempuan</label>
+        </div>
+        <div class="form-group">
+          <label for="newsletter">Menjadi warga Jura Tempest:</label>
+          <input type="checkbox" id="newsletter" name="newsletter" />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <footer class="container">
+      <p>© 2024 Website Idola Saya. Semua Hak Dilindungi.</p>
+    </footer>
+  </body>
+</html>
